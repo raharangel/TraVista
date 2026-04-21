@@ -1,20 +1,20 @@
 export default function Review({ data, next }) {
   return (
-    <div className="max-w-xl w-full px-6">
-      <h2 className="text-2xl mb-6">Review your preferences</h2>
+    <div className="h-screen flex flex-col items-center justify-center text-center">
 
-      <div className="border rounded-xl p-4 space-y-2">
-        <p><b>Destination:</b> {data.destination}</p>
-        <p><b>Budget:</b> ${data.budget}</p>
-        <p><b>Style:</b> {data.style.join(", ")}</p>
-      </div>
+      <h2 className="text-2xl mb-6">Review</h2>
+
+      <p>Budget: ${data.budget}</p>
+      <p>Style: {data.style.join(", ")}</p>
+      <p>Destination: {data.destination}</p>
 
       <button
         onClick={next}
-        className="mt-6 w-full bg-[#4F7D5C] text-white py-4 rounded-full"
+        className="mt-6 px-8 py-4 bg-green-600 text-white rounded-full"
       >
-        Find My Perfect Plan →
+        Generate →
       </button>
+
     </div>
   );
 }
