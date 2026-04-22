@@ -14,7 +14,7 @@ export default function StepBudget({ data, setData, next }) {
         max="10000"
         value={data.budget}
         onChange={(e) =>
-          setData({ ...data, budget: e.target.value })
+       setData({ ...data, budget: e.target.value })
         }
         className="w-1/2 mt-6"
       />
